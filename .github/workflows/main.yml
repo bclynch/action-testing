@@ -10,3 +10,7 @@ jobs:
     - uses: ./action-a
       env:
         MY_NAME: "Mona"
+
+# Checks for amount of PRs accepted and labels PR if accepted amount
+name: Label approved pull requests
+uses: pullreminders/label-when-approved-action@v1.0.3
