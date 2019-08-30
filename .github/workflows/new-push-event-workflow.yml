@@ -1,6 +1,0 @@
-# Checks for amount of PRs accepted and labels PR if accepted amount
-workflow "Label approved pull requests" {
-  on = "pull_request_review"
-  resolves = ["Label when approved"]
-}
-

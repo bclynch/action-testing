@@ -1,0 +1,13 @@
+# Checks for amount of PRs accepted and labels PR if accepted amount
+name: Label approved pull requests
+on: pull_request_review
+
+jobs:
+  my-job:
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
+      # This step checks out a copy of your repository.
+      - uses: actions/checkout@v1
+      # This step references the directory that contains the action.
+      - uses: ./.github/actions/approve-label-action/action
