@@ -1,0 +1,15 @@
+# Checks for amount of PRs accepted and labels PR if accepted amount
+name: descriptive-workflow-name
+on: push
+
+jobs:
+  build:
+    name: Hello world action
+    runs-on: ubuntu-latest    
+    steps:
+    - uses: actions/checkout@master # uses a copy of master
+    - uses: pullreminders/label-when-approved-action@v1.0.3 # uses this marketplace action
+    secrets: ["GITHUB_TOKEN"]
+    env:
+      LABEL_NAME: "approved"
+      APPROVALS: "1"
